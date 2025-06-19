@@ -1,0 +1,44 @@
+$txt-color:#FF6060;
+
+.container-error{
+    text-align: center;
+    margin-bottom: 139px;
+    display: flex;
+    flex-direction: column;
+    gap:120px;
+    @media screen and (max-width: 375px) {
+        gap:113px;
+        margin-top:40px;
+    }
+    & h1 {
+    font-size:288px;
+    color: $txt-color;
+    line-height: 143%;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    width: 100%;
+    @media screen and (max-width: 375px) {
+        font-size:96px;
+    }
+}
+    & h2 {
+    color: $txt-color;
+    line-height: 143%;
+    font-size: 36px;
+    font-weight:500;
+    @media screen and (max-width: 375px) {
+        font-size:18px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+    & .link-error {
+        color:black;
+        text-decoration: underline;
+        font-size: 18px;
+        
+    }
+}
+
