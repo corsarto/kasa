@@ -1,5 +1,5 @@
 import datas from '../../datas/datas.json';
-import { Link } from 'react-router-dom';
+
 
 function Card() {
 

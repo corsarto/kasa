@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom';
 import '../../assets/style/main.scss';
-import Banner from '../../components/Banner';
-import Card from '../../components/Card';
+import Banner from '../../components/Banner/Banner';
+import Card from '../../components/Card/Card';
+
 
 
 
 function Home() {
   return <div className ="home-container">
       <Banner />
-      <Card />
+      
+      <Link to='/location/id?' className="link-location"><Card /></Link>
    
     
     </div>

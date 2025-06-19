@@ -1,0 +1,30 @@
+$txt-size: 24px;
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    height: 209px;
+    font-size: $txt-size;
+    gap: 40px;
+    & .logo-footer {
+        width: 122px;
+        height: 39px;
+    }
+    @media screen and (max-width: 375px) {
+       font-size: $txt-size / 2;
+        gap: 0px;
+        & .footer-txt {
+            max-width: 133px;
+            text-align: center;
+            padding: 15px 15px;
+            line-height: 143%;
+        }
+        
+    }
+  
+}
