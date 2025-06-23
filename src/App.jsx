@@ -15,14 +15,16 @@ import '../src/components/Card/card.scss'
 import '../src/pages/About/about.scss'
 
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
     <BrowserRouter>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/location/id?" element={<Location />} />
+        <Route path="/location/:id" element={<Location />} /> 
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

@@ -42,25 +42,16 @@
   
  }
 
- @keyframes txt-opac {
-    0% {
-        opacity: 0;
-    }
-    15% {
-        opacity:0.2;
-    }
-    32%  {
-        opacity:0.5;
-    }
-    63% {
-        opacity:0.75;
-    }
-    82% {
-        opacity:1;
-    }
-    100% {
-        opacity:1;
-    }
+@keyframes slide-in {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity:1;
+  }
 }
 
 .content {
@@ -68,13 +59,13 @@
     line-height: 143%;
     font-weight: 400;
     padding-top:15px;
-    opacity:0;
+    
     &.open{
-        animation: txt-opac 300ms ease-in-out both;
-        @media screen and (max-width: 375px) {
-           padding-left:10px;
-           font-size: 14px;
+    animation: slide-in 0.5s;
+    
+    @media screen and (max-width: 375px) {
+        padding-left:10px;
+        font-size: 14px;
         }
-    }
-}
+}}
 

@@ -13,7 +13,7 @@ function CollapseItem({ title, content }) {
                 {title}
                 <FontAwesomeIcon icon={faChevronUp} className={isOpen ? 'open' : ''} />
             </h2>
-            {isOpen && <span className={`content ${isOpen ? 'open' : ''}`}>{content}</span>}
+            {isOpen && <span className={`content ${isOpen ? 'open' : 'close'}`}>{content}</span>}
         </div>
     );
 }

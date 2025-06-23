@@ -6,14 +6,18 @@ import Card from '../../components/Card/Card';
 
 
 
+
 function Home() {
-  return <div className ="home-container">
+  return (
+    <div className="home-container">
       <Banner />
       
-      <Link to='/location/id?' className="link-location"><Card /></Link>
-   
+       
+          <Card />
+        
     
     </div>
-
+  );
 }
+
 export default Home

@@ -1,10 +1,16 @@
+import Slideshow from "../../components/Slideshow/Slideshow";
+import LocationDetail from "../../components/LocationDetail/LocationDetail";
 
-function Location () {
+function Location() {
+    
+    
+
+    
     return (
         <div>
-            <span>Page de location a build</span>
-            <p>Description</p>
-            <p>Equipements</p>
+            <Slideshow  />
+            {/* <LocationDetail /> */}
+            
         </div>
     )
 }
