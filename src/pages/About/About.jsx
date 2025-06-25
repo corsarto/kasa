@@ -1,6 +1,6 @@
 import imgAbout from '../../assets/images/img-about.png';
 import '../../assets/style/main.scss';
-import Collapse from '../../components/Collapse/Collapse';
+import AboutInfos from '../../components/AboutInfos/AboutInfos';
 
 
 function About() {
@@ -8,7 +8,7 @@ function About() {
     <div className="about-container">
       <img src={imgAbout} alt="Image d'illustration à propos" className="img-about" />
       <div>
-        <Collapse />
+        <AboutInfos />
       </div>
     </div>
   )

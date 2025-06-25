@@ -9,7 +9,7 @@ function Location() {
     return (
         <div>
             <Slideshow  />
-            {/* <LocationDetail /> */}
+            <LocationDetail /> 
             
         </div>
     )

@@ -1,0 +1,15 @@
+.rating-location {
+    display:flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.star-icon {
+    width: 24px;
+    height: 24px;
+    color: #E3E3E3;
+    
+}
+.active {
+    color: #FF6060;
+}

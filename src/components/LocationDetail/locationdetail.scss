@@ -1,0 +1,112 @@
+$color-secondary: #FF6060;
+$font-family: 'Montserrat', sans-serif;
+$font-weight: 500;
+$text-size: 36px;
+
+.container-infos-location{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: auto;
+    gap: 76px;
+
+}
+
+.collapse-location {
+    width:100%;
+    margin-bottom: 50px; 
+    & h2 {
+        display:flex;
+        align-items: center;
+        justify-content: space-between ;
+        background-color:$color-secondary ;
+        padding: 10px 20px 10px 10px;
+        border-radius: 10px;
+        color:white;
+        
+    }
+    & span {
+        font-size: $text-size / 2;
+        font-family: $font-family;
+         & li {
+        padding-left: 10px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        list-style: none;
+         }
+    }
+   
+}
+
+.location-detail {
+    display: flex;
+    flex-direction: row;
+    max-width: 1240px;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+
+.container-title-location {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:10px;
+    & h1 {
+        font-family: $font-family;
+        font-size: $text-size;
+        font-weight: $font-weight;
+        color: $color-secondary;
+    }
+    & p {
+        font-family: $font-family;
+        font-size: $text-size / 2;
+        font-weight: $font-weight;
+        }
+    & ul {
+        display:flex;
+        flex-direction: row;
+        gap:10px;
+        list-style: none;
+        color: white;
+    }
+    & li {
+        background-color: $color-secondary;
+        min-width:115px;
+        height: 25px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: $font-weight;
+        font-family: $font-family;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+}
+
+.container-host{
+    display: flex;
+    flex-direction: column;
+    & p {
+        font-family: $font-family;
+        font-size: $text-size / 2;
+        font-weight: $font-weight;
+        color: $color-secondary;
+        max-width: 93px;
+        max-height: 52px;
+        text-align: end;
+        padding:7px;
+    }
+    & img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        margin-right: 10px;
+        
+    }
+}
+.host-description {
+    display:flex;
+    flex-direction: row;
+    margin-bottom:20px;
+}
