@@ -15,8 +15,8 @@ $txt-size: 24px;
         width: 122px;
         height: 39px;
     }
-    @media screen and (max-width: 375px) {
-       font-size: $txt-size / 2;
+    @media screen and (max-width: 768px) {
+       font-size: calc($txt-size / 2);
         gap: 0px;
         & .footer-txt {
             max-width: 133px;

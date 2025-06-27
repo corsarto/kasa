@@ -3,18 +3,26 @@ import { faChevronUp} from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import '../Collapse/collapse.scss';
 
-function Collapse({ title, content, className }) {
+function Collapse({ content, title}) {
+    
     const [isOpen, setIsOpen] = useState(false);
-
+   
     return (
-        <div className={`${className}`}>
-            <h2  onClick={() => setIsOpen(!isOpen)}>
+        <div className={`dropdown ${isOpen ? 'open' : ''}`}>
+            
+            <button className="collapse-button">
+            <h2>
                 {title}
-                <FontAwesomeIcon icon={faChevronUp} className={isOpen ? 'open' : ''} />
             </h2>
-            
-            
-            {isOpen && <span className={`content ${isOpen ? 'open' : ''}`}>{content}</span>}
+            <FontAwesomeIcon 
+                icon={faChevronUp} 
+                className={isOpen ? 'open' : ''}  
+                onClick={() => setIsOpen(!isOpen)}
+            />
+            </button>
+            <div  className={`content-wrapper ${isOpen ? 'open' : ''}`}>
+            <span className='content'>{content}</span>
+            </div>
         </div>
     );
 }

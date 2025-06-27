@@ -1,18 +1,56 @@
-h2 svg{
-        padding-top:5px;
+.dropdown {
+  max-width: 1023px;
+  border-radius: 10px;
+  overflow: hidden;
+  
+  &.open {
+    .collapse-button svg {
+      transform: rotate(-180deg);
+  
+    }
+}
+}
+.content-wrapper{
+  display: none;
+  &.open{
+    animation: slide-in 0.5s forwards;
+    display:flex;
+  }
+}
+.collapse-button {
+    width:100%;
+    height: 52px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    padding: 10px 20px 10px 10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border:none;
+    @media screen and (max-width: 768px) {
+      height: 30px;
+      padding: 10px 10px 10px 0;
+      & h2{
+        height: 30px;
+      }
+    }
+    & svg{
         width:32px;
         height:32px;
-        transition: transform 300ms ease;
+        transition: transform 250ms ease;
         transform-origin:center;
         cursor: pointer;
         background-color: #FF6060;
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: 768px) {
             width: 18px;
             height:18px;
         }
-        &.open {
-            transform: rotate(-180deg);
-            }}
+        
+      }
+  }
 
 @keyframes slide-in {
   from {
@@ -31,11 +69,8 @@ h2 svg{
     font-weight: 400;
     padding-top:15px;
     
-    &.open{
-    animation: slide-in 0.5s;
-    
     @media screen and (max-width: 375px) {
         padding-left:10px;
         font-size: 14px;
         }
-}}
+}

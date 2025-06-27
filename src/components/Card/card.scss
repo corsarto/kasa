@@ -10,9 +10,11 @@
     align-items: center;
     margin-bottom: 50px;
     justify-content: center;
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 768px) {
         margin: 22px;
         gap:22px;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -46,7 +48,7 @@
         padding: 20px;
         line-height: 143%;
      }
-     @media screen and (max-width: 375px) {
+     @media screen and (max-width: 768px) {
         margin: 0;
         max-width: 335px;
         max-height: 255px;

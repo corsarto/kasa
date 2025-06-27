@@ -1,5 +1,6 @@
 import Slideshow from "../../components/Slideshow/Slideshow";
 import LocationDetail from "../../components/LocationDetail/LocationDetail";
+import './location.scss';
 
 function Location() {
     
@@ -7,7 +8,7 @@ function Location() {
 
     
     return (
-        <div>
+        <div className="location-container">
             <Slideshow  />
             <LocationDetail /> 
             

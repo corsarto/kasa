@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+
 import '../../assets/style/main.scss';
 import Banner from '../../components/Banner/Banner';
 import Card from '../../components/Card/Card';

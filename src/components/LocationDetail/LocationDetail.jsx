@@ -4,13 +4,14 @@ import './LocationDetail.scss';
 import Collapse from '../Collapse/Collapse';
 import RatingLocation from '../RatingLocation/RatingLocation';
 
+
 function LocationDetail() {
      const { id } = useParams();
 
     const logement = datas.find((item) => item.id === id);
     return (
     <>
-        <div className='location-detail'>
+        <div className='location-detail-container'>
             <div className='container-title-location'>
                 <h1>{logement.title}</h1>
                 <p>{logement.location}</p>
@@ -21,7 +22,7 @@ function LocationDetail() {
                 </ul>
             </div>
             <div className='container-host'>
-                <div className='host-description'>
+                <div className='host-profile'>
                     <p>{logement.host.name}</p>
                     <img src={logement.host.picture} alt="Photo du propriétaire"/>
                 </div>
@@ -30,11 +31,11 @@ function LocationDetail() {
         </div>
         
         <div className="container-infos-location">
-            <Collapse className='collapse-location'
+            <Collapse 
                 title='Description'
                 content={logement.description}
             />
-            <Collapse className='collapse-location'
+            <Collapse 
                 title='Equipements'
                 content={
                     <ul>

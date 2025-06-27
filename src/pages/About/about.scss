@@ -3,7 +3,7 @@
 .about-container{
     max-width: 1240px;
     margin: auto;
-    @media  screen and (max-width: 375px)  {
+    @media  screen and (max-width: 768px)  {
         max-width: 335px;
     }
 }
@@ -13,9 +13,8 @@
     height: 223px;
     border-radius: 25px;
     object-fit: cover;
-    margin-bottom: 50px;
     filter: brightness(70%);
-   @media  screen and (max-width: 375px)  {
+   @media  screen and (max-width: 768px)  {
         max-height: 111px;
     }
 }

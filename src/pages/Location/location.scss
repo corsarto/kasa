@@ -1,0 +1,12 @@
+.location-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    margin:auto;
+    justify-content: space-between;
+    gap: 30px;
+    @media screen and (max-width: 768px) {
+        max-width:335px;
+        gap:0;
+    }
+}

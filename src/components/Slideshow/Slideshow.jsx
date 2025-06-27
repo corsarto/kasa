@@ -9,14 +9,17 @@ import { useParams } from 'react-router-dom';
 
 function Slideshow() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState(''); 
     const { id } = useParams();
 
     const logement = datas.find((item) => item.id === id);
     const pictures = logement ? logement.pictures : [];
     const handleNext = () => {
+        setDirection('right');
         setCurrentIndex((prevIndex) => (prevIndex + 1) % pictures.length);
     };
     const handlePrev = () => {
+        setDirection('left');
         setCurrentIndex((prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length);
     };
   
@@ -24,7 +27,12 @@ function Slideshow() {
     return (
         <div  className="slideshow-container" >
             
-            <img src={pictures[currentIndex]} alt={`slide-${currentIndex}`} key={currentIndex}/>
+            <img src={pictures[currentIndex]} 
+            alt={`slide-${currentIndex}`} 
+            key={currentIndex}
+            className={`slide-img ${direction}`}
+            
+            />
        
         {pictures.length > 1 && (
             <div className="navigation-icons">
