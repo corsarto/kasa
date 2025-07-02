@@ -9,7 +9,7 @@ function Location() {
     
     return (
         <div className="location-container">
-            <Slideshow  />
+            <Slideshow />
             <LocationDetail /> 
             
         </div>

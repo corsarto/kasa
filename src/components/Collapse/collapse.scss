@@ -6,14 +6,18 @@
   &.open {
     .collapse-button svg {
       transform: rotate(-180deg);
+  }
   
-    }
 }
 }
 .content-wrapper{
   display: none;
   &.open{
     animation: slide-in 0.5s forwards;
+    display:flex;
+  }
+  &.closed{
+    animation: slide-out 0.5s forwards;
     display:flex;
   }
 }
@@ -29,6 +33,7 @@
     color: white;
     font-size: 18px;
     font-weight: 700;
+    border:none;
     border:none;
     @media screen and (max-width: 768px) {
       height: 30px;
@@ -63,11 +68,22 @@
     opacity:1;
   }
 }
+@keyframes slide-out {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-30px);
+    opacity:0;
+  }
+}
 .content {
     font-size: 18px;
     line-height: 143%;
     font-weight: 400;
-    padding-top:15px;
+    padding:15px 10px 15px 25px;
     
     @media screen and (max-width: 375px) {
         padding-left:10px;

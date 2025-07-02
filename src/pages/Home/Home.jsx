@@ -11,11 +11,7 @@ function Home() {
   return (
     <div className="home-container">
       <Banner />
-      
-       
-          <Card />
-        
-    
+      <Card />
     </div>
   );
 }

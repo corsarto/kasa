@@ -22,6 +22,9 @@ $img-size:64px;
     @media screen and (max-width: 768px) {
         flex-direction: column;
         gap:20px;
+        & .content {
+            font-size:12px;
+        }
     }
     & div {
       width:100%;

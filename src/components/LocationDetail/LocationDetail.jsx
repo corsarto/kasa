@@ -1,14 +1,26 @@
 import { datas } from '../../datas/datas.json'
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 import './LocationDetail.scss';
 import Collapse from '../Collapse/Collapse';
 import RatingLocation from '../RatingLocation/RatingLocation';
 
 
 function LocationDetail() {
-     const { id } = useParams();
+    const { id } = useParams();
+    const navigate = useNavigate();
 
     const logement = datas.find((item) => item.id === id);
+    
+useEffect(() => {
+    if (!logement) {
+         navigate('*');
+    }
+}, [ logement, navigate ]);
+    if (!logement) {
+        return null;
+    }
+
     return (
     <>
         <div className='location-detail-container'>
@@ -47,8 +59,8 @@ function LocationDetail() {
                     /> 
         </div>
     </>
-        
-    );
-}
+    
+    );}
+
 
 export default LocationDetail;
