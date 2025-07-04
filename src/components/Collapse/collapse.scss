@@ -13,11 +13,11 @@
 .content-wrapper{
   display: none;
   &.open{
-    animation: slide-in 0.5s forwards;
+    animation: slide-in 250ms forwards;
     display:flex;
   }
   &.closed{
-    animation: slide-out 0.5s forwards;
+    animation: slide-out 250ms forwards;
     display:flex;
   }
 }
@@ -58,23 +58,27 @@
   }
 
 @keyframes slide-in {
-  from {
+  0%{
     transform: translateY(-30px);
-    opacity: 0;
+    opacity:0;
   }
-
-  to {
+  50%{
+    opacity:1;
+  }
+  100%{
     transform: translateY(0);
     opacity:1;
   }
 }
 @keyframes slide-out {
-  from {
+  0%{
     transform: translateY(0);
-    opacity: 1;
+    opacity:1;
   }
-
-  to {
+  50%{
+    opacity:0;
+  }
+  100%{
     transform: translateY(-30px);
     opacity:0;
   }
