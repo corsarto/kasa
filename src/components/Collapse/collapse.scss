@@ -12,9 +12,11 @@
 }
 .content-wrapper{
   display: none;
+  
   &.open{
     animation: slide-in 250ms forwards;
     display:flex;
+    
   }
   &.closed{
     animation: slide-out 250ms forwards;
@@ -63,17 +65,19 @@
     opacity:0;
   }
   50%{
-    opacity:1;
+    opacity:0;
   }
   100%{
     transform: translateY(0);
     opacity:1;
+    background-color: #F6F6F673;
   }
 }
 @keyframes slide-out {
   0%{
     transform: translateY(0);
     opacity:1;
+    background-color: transparent;
   }
   50%{
     opacity:0;

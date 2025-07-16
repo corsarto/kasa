@@ -29,7 +29,6 @@ $border-radius: 25px;
         z-index: 1;
         font-size: 48px;
         font-weight: 700;
-        
         text-shadow: .10rem .10rem  color.adjust(#000000, $lightness: -60%);
         
         @media screen and (max-width: 768px) {
